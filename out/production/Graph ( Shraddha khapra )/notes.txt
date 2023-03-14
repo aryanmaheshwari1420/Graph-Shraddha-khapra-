@@ -1,0 +1,7 @@
+
+ Topological sorting : It is a linear order of vertices such that every directed edge u->v,
+                       the vertex u comes before v in the order.
+
+
+2. Topological sorting performed for the (DAG) means for directed acyclic graph.
+
