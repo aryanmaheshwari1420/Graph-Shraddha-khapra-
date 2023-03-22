@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class cycle_detection {
+public class cycle_detection_directed {
     public static void main(String[] args) {
 
         int V = 4;
@@ -33,7 +33,7 @@ public class cycle_detection {
         rec[curr] = true;
         for (int i = 0; i < graph[curr].size(); i++) {
             Edge e = graph[curr].get(i);
-            if(rec[e.dest]==true){
+            if(rec[e.dest]){
                 return true;
             }else if(!vis[e.dest] && isCycleDetect(graph,vis,e.dest,rec)){
                 return true;
