@@ -5,3 +5,16 @@
 
 2. Topological sorting performed for the (DAG) means for directed acyclic graph.
 
+3.  Creating graph using ArrayList is quite effecient as compared to use with the adjacency matrix.
+    because adjacency matrix contain all the information of nodes that are not connected to it also.
+    while in ArrayList it contain the information only for those nodes that are directly connected to it.
+
+4. Time complexity of creating graph using ArrayList<>() is O(x) where x denotes the no of nodes that are directly
+   connected to it.  // constant time
+
+5.  Time complexity of creating graph using Adjacency matrix is O(v) where v denotes the no of all nodes . // linear time and space contain o(V^2)
+
+6.
+
+
+
