@@ -19,6 +19,7 @@ public class adjacency_list_withedgeweight {
             graph[i] = new ArrayList<Edge>();
         }
 
+
         graph[0].add(new Edge(0,2,2));
 
         graph[1].add(new Edge(1,2,3));
