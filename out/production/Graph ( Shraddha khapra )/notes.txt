@@ -5,3 +5,22 @@
 
 2. Topological sorting performed for the (DAG) means for directed acyclic graph.
 
+3.  Creating graph using ArrayList is quite effecient as compared to use with the adjacency matrix.
+    because adjacency matrix contain all the information of nodes that are not connected to it also.
+    while in ArrayList it contain the information only for those nodes that are directly connected to it.
+
+4. Time complexity of creating graph using ArrayList<>() is O(x) where x denotes the no of nodes that are directly
+   connected to it.  // constant time
+
+5.  Time complexity of creating graph using Adjacency matrix is O(v) where v denotes the no of all nodes . // linear time and space contain o(V^2)
+
+6. Sometimes 2d array is given and what we called them is that Implicit graph for finding particular things. // flood fill algo is used here
+
+7. BFS is also known as indirect level order traversal. // time complexity is O(V+E)
+
+   3 steps we have to perform to visit the node in BFS 1. print the curr node
+                                                       2. vis[curr] = True
+                                                       3. curr node neighbors add in queue. (only checked when if(curr_node!=true)
+
+8. DFS time complexity is also O(V+E)
+

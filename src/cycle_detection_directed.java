@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 
+
+// time-complexity ==> O(V+E)
+
 public class cycle_detection_directed {
     public static void main(String[] args) {
 
@@ -7,10 +10,10 @@ public class cycle_detection_directed {
         ArrayList<Edge> graph[] = new ArrayList[V];
         createGraph(graph);
         boolean vis[] = new boolean[V];
-        boolean rec[] = new boolean[V];
+        boolean rec_stack[] = new boolean[V];
         for (int i = 0; i < V; i++) {
             if(!vis[i]){
-                boolean isCycle = isCycleDetect(graph,vis,0,rec);
+                boolean isCycle = isCycleDetect(graph,vis,0,rec_stack);
                 if(isCycle){
                     System.out.println(isCycle);
                     break;
@@ -28,18 +31,18 @@ public class cycle_detection_directed {
         }
     }
 
-    public static boolean isCycleDetect(ArrayList<Edge> graph[],boolean vis[],int curr, boolean rec[]){
+    public static boolean isCycleDetect(ArrayList<Edge> graph[],boolean vis[],int curr, boolean rec_stack[]){
         vis[curr] = true;
-        rec[curr] = true;
+        rec_stack[curr] = true;
         for (int i = 0; i < graph[curr].size(); i++) {
             Edge e = graph[curr].get(i);
-            if(rec[e.dest]){
-                return true;
-            }else if(!vis[e.dest] && isCycleDetect(graph,vis,e.dest,rec)){
+            if(rec_stack[e.dest]){
+                return true; // if in rec_stack the call for the neighbor is already true it means cycle is present.
+            }else if(!vis[e.dest] && isCycleDetect(graph,vis,e.dest,rec_stack)){
                 return true;
             }
         }
-        rec[curr] = false;
+        rec_stack[curr] = false;
         return false;
     }
 

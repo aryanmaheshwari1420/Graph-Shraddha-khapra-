@@ -11,7 +11,7 @@ public class All_path_src_dest extends DFS{
         printAllPath(graph,new boolean[V],src,"0",tar);
 
     }
-
+    // O(V^V) // this function is good for only small graph
     public static void printAllPath(ArrayList<Edge> graph[],boolean vis[],int curr,String path ,int tar){
         if(curr==tar){
             System.out.println("path will be "+path);

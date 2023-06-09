@@ -6,9 +6,14 @@ public class DFS {
         ArrayList<Edge>[] graph = new ArrayList[V];
         boolean vis[] = new boolean[V];
         createGraph(graph);
-        dfs(graph,0,vis);
+        for (int i = 0; i < V;i++) {
+            if(vis[i]==false){
+                dfs(graph,i,vis);
+            }
+        }
         System.out.println();
     }
+
     public static void dfs(ArrayList<Edge> graph[], int curr, boolean vis[]){
         System.out.print(curr+" ");
         vis[curr] = true;
@@ -19,6 +24,7 @@ public class DFS {
             }
         }
     }
+
     public static void createGraph(ArrayList<Edge> graph[]){
         for (int i = 0; i < graph.length; i++) {
             graph[i] = new ArrayList<Edge>();
