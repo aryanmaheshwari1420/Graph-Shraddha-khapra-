@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 
+
+//Steps: 1. taking a node and creating a array such that marked all the noes to Integer.MAX_VALUE in the array.
+//       2.
+
 public class dijkstra_algo {
     public static void main(String[] args) {
 
@@ -36,7 +40,7 @@ public class dijkstra_algo {
         @Override
         public int compareTo(Pair p2){
             return this.dist  -p2.dist; // ascending
-//            return  p2.dist - this.dist // descending
+//          return  p2.dist - this.dist // descending
         }
     }
 
@@ -48,17 +52,17 @@ public class dijkstra_algo {
             if(i!=src){
                 dist[i] = Integer.MAX_VALUE;
             }
-        }
+        } // initialization of the for loop in this src is 0 else is Integer.MAX_VALUE;
+
         boolean vis[] = new boolean[V];
         queue.add(new Pair(0,0));
 
         //bfs
 
         while (!queue.isEmpty()){
-            Pair curr = queue.remove(); //shortest
+            Pair curr = queue.remove(); //shortest given by the priority queue as we have implements the comparable class.
             if(!vis[curr.node]){
                 vis[curr.node] = true;
-
                 for (int i = 0; i < graph[curr.node].size(); i++) {
                     Edge e = graph[curr.node].get(i);
                     int u = e.src;

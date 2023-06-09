@@ -41,5 +41,12 @@ Topological sort is an algorithmic technique used to order the vertices of a dir
     tab pata chalta hai jab aap kissi node pr jaane chahre hai lekin vo aapka parent bhi nhi h jisse aap aaye hai so this is the
     condition for the detection of cycle.
 
-14.    
+14. Dijkstra's algorithm --> It worked on BFS , it is an greedy(laalchi) algorithm  ,generally use priority Queue
+
+15. Bellman ford work on the dynamic programming algorithm not like dijkstra which work on greedy algo or approch.
+    Bellman ford doesn't work for negative weight cycle.
+
+16.
+
+
 

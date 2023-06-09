@@ -1,5 +1,14 @@
 import java.util.ArrayList;
 
+// 1. It works also on the negative weights
+// 2. -2 < 4 is valid means -2 is smaller than the 4 in distance not like you say that how can distance is in negative , it is valid.
+// 3. if in the graph there are V vertices so you have to perfrom the loop v-1 times
+// 4. initially in the distance arr the first is 0 and all else are the max-infinity.
+// 5. now performing relaxation v-1 times to get the final result.
+
+
+
+
 public class Bellman_ford {
     public static void main(String[] args) {
 
@@ -86,6 +95,7 @@ public class Bellman_ford {
         graph[3].add(new Edge(3,4,4));
 
         graph[4].add(new Edge(4,1,-1));
+//        graph[4].add(new Edge(4,1,-10))  ; this will give you the that it contains the negative weight cycle.
 
     }
 }
