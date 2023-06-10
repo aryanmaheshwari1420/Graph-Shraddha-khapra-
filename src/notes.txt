@@ -46,7 +46,22 @@ Topological sort is an algorithmic technique used to order the vertices of a dir
 15. Bellman ford work on the dynamic programming algorithm not like dijkstra which work on greedy algo or approch.
     Bellman ford doesn't work for negative weight cycle.
 
-16.
+16. Minimum Spanning Tree ---> Subset of the tree that connects all the vertices together, without any cycles with the minimum edge weights.
+    all nodes are included and all nodes are connected
+    no cycle is present.
 
+17. StronglyConnectedComponent : SCC is a component in which we reach every vertex of the component from every other vertex in that component.
+    see image img_1.png
+
+18. To implement StronglyConnectedComponent we use the algorithm ( Kosarajus's algorithm )  , only for the directed graph .
+
+19. Transpose of graph means reversing the arrow in the graph .
+
+20.  Steps to perform the kosaraju's algo:
+    1. Get nodes in stack (topological sort)
+    2. Transpose the graph
+    3. Do DFS according to stack nodes on the transpose graph
+
+21 . Tarjan's algorithm is used for finding the bridge , articulation point , Stronglyconnected Component ,topological sorting bhi kr stke hai.
 
 
